@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * PHASE 03: base layer for the AFFINITY '26 design system. Tokens live in
+ * styles/tokens.ts (imported by tailwind.config.ts) — this file is only
+ * global resets, focus/selection treatment, and the reduced-motion gate
+ * that every decorative animation in components/design-system/ respects.
+ */
+
+@layer base {
+  * {
+    @apply border-antique-gold/20;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    /* Base color/font already set via className in app/layout.tsx so
+       there is no flash-of-unstyled-background; this is the fallback. */
+    @apply bg-midnight text-ivory;
+  }
+
+  ::selection {
+    background-color: theme("colors.antique-gold");
+    color: theme("colors.midnight");
+  }
+
+  /* Visible, on-brand focus ring for every interactive element reached by
+     keyboard — never suppressed. Mouse/touch users don't see it, because
+     it's keyed off :focus-visible, not :focus. */
+  :focus-visible {
+    outline: 2px solid theme("colors.warm-gold");
+    outline-offset: 2px;
+    border-radius: theme("borderRadius.sm");
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+  }
+
+  /*
+   * PHASE 05: every in-page anchor target (Navbar's Story/Cause links,
+   * and any future "skip to X" or table-of-contents link) lands below
+   * the fixed header instead of underneath it. `:where()` keeps this at
+   * zero specificity so any component can still override it.
+   */
+  :where([id]) {
+    scroll-margin-top: 6rem;
+  }
+}
+
+/**
+ * Keyframes shared by decorative components (StarField, Lantern). Kept
+ * here rather than per-component <style> tags so there's one definition
+ * each, and because the global reduced-motion rule above already collapses
+ * any `animation-duration` referencing them to ~0 — no extra guard needed
+ * inside the components themselves.
+ */
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: var(--star-min-opacity, 0.15);
+  }
+  50% {
+    opacity: var(--star-opacity, 0.8);
+  }
+}
+
+@keyframes lantern-glow {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.06);
+  }
+}
+
+/**
+ * Project-wide reduced-motion gate. Individual components still decide
+ * *what* to disable (see each component's own comments), but this is the
+ * one place that reads the media query, so the rule is never forgotten on
+ * a one-off basis.
+ */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0s !important;
+    scroll-behavior: auto !important;
+  }
+}

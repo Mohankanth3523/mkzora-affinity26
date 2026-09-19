@@ -1,0 +1,32 @@
+# dependencies
+node_modules/
+affinity26-src/node_modules/
+
+# AFFINITY '26 (Next.js) build output
+affinity26-src/.next/
+affinity26-src/out/
+
+# final assembled deployment directory (regenerated on every build)
+dist/
+
+# local environment files (never commit; real values live in the Cloudflare project settings)
+.env.local
+.env*.local
+affinity26-src/.env.local
+affinity26-src/.env*.local
+.dev.vars
+.wrangler/
+
+# TypeScript / Next.js generated
+*.tsbuildinfo
+affinity26-src/next-env.d.ts
+
+# logs
+npm-debug.log*
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

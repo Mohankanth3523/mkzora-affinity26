@@ -1,0 +1,637 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>MKZORA — Digital Marketing &amp; Web Development</title>
+<meta name="description" content="MKZORA is a digital marketing and web development agency helping businesses build their brand, reach more customers, and grow online.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#050505">
+<link rel="canonical" href="https://mkzora.com/">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MKZORA">
+<meta property="og:title" content="MKZORA — Digital Marketing &amp; Web Development">
+<meta property="og:description" content="MKZORA is a digital marketing and web development agency helping businesses build their brand, reach more customers, and grow online.">
+<meta property="og:url" content="https://mkzora.com/">
+<meta property="og:image" content="https://mkzora.com/assets/images/mkzora-og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MKZORA logo — digital marketing and web development">
+<!-- Twitter / X Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MKZORA — Digital Marketing &amp; Web Development">
+<meta name="twitter:description" content="MKZORA is a digital marketing and web development agency helping businesses build their brand, reach more customers, and grow online.">
+<meta name="twitter:image" content="https://mkzora.com/assets/images/mkzora-og.jpg">
+<meta name="twitter:image:alt" content="MKZORA logo — digital marketing and web development">
+<!-- Favicon (MKZORA mark; relative to the site root, so they resolve at https://mkzora.com/ and never under /affinity26/) -->
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon/favicon-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<!-- Fonts (preconnect first, then stylesheets, deduplicated) -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600&amp;family=Hanken+Grotesk:wght@500;600;700&amp;family=Inter:wght@400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "error-container": "#93000a",
+                      "primary-fixed": "#e5e2e1",
+                      "outline-variant": "#444748",
+                      "primary-container": "#050505",
+                      "on-primary-fixed-variant": "#474646",
+                      "secondary-fixed": "#e2e2e2",
+                      "on-surface-variant": "#c4c7c7",
+                      "on-error": "#690005",
+                      "surface-container-highest": "#353434",
+                      "tertiary-fixed": "#e3e2e2",
+                      "surface-container-high": "#2b2a2a",
+                      "on-primary-container": "#797777",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "surface-dim": "#141313",
+                      "inverse-surface": "#e5e2e1",
+                      "on-secondary-container": "#b4b5b5",
+                      "surface": "#141313",
+                      "tertiary-fixed-dim": "#c7c6c6",
+                      "background": "#141313",
+                      "tertiary": "#c7c6c6",
+                      "on-primary-fixed": "#1c1b1b",
+                      "tertiary-container": "#040505",
+                      "surface-container-lowest": "#0e0e0e",
+                      "on-tertiary-container": "#777777",
+                      "inverse-primary": "#5f5e5e",
+                      "surface-tint": "#c9c6c5",
+                      "on-surface": "#e5e2e1",
+                      "on-tertiary-fixed-variant": "#464747",
+                      "on-background": "#e5e2e1",
+                      "surface-bright": "#3a3939",
+                      "error": "#ffb4ab",
+                      "secondary-fixed-dim": "#c6c6c7",
+                      "outline": "#8e9192",
+                      "secondary": "#c6c6c7",
+                      "on-primary": "#313030",
+                      "surface-variant": "#353434",
+                      "on-error-container": "#ffdad6",
+                      "surface-container": "#201f1f",
+                      "primary": "#c9c6c5",
+                      "on-secondary": "#2f3131",
+                      "on-tertiary": "#2f3131",
+                      "surface-container-low": "#1c1b1b",
+                      "secondary-container": "#454747",
+                      "on-secondary-fixed": "#1a1c1c",
+                      "on-secondary-fixed-variant": "#454747",
+                      "inverse-on-surface": "#313030",
+                      "primary-fixed-dim": "#c9c6c5"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-lg": "32px",
+                      "gutter": "24px",
+                      "stack-md": "16px",
+                      "margin-tablet": "32px",
+                      "stack-sm": "8px",
+                      "section-gap": "160px",
+                      "margin-mobile": "20px",
+                      "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "label-caps": [
+                              "Geist"
+                      ],
+                      "mono-technical": [
+                              "Geist"
+                      ],
+                      "display-xl-mobile": [
+                              "Hanken Grotesk"
+                      ],
+                      "display-xl": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "letterSpacing": "0em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.15em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "mono-technical": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-xl-mobile": [
+                              "56px",
+                              {
+                                      "lineHeight": "60px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-xl": [
+                              "120px",
+                              {
+                                      "lineHeight": "110px",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "72px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "20px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "0em",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+            }
+          }
+        }
+      </script>
+<link rel="stylesheet" href="css/main.css">
+<!-- Noscript fallback — ensure content visible without JS -->
+<noscript>
+<style>
+.reveal-up { opacity: 1 !important; transform: none !important; }
+.cinematic-reveal { opacity: 1 !important; animation: none !important; }
+</style>
+</noscript>
+<!-- Three.js dependency (single load) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<!-- Custom Element for Three.js -->
+<script>
+        class ThreejsScene extends HTMLElement {
+            connectedCallback() {
+                const src = this.getAttribute('src');
+                if (src) {
+                    const script = document.createElement('script');
+                    script.textContent = `
+                        (function() {
+                            const container = document.currentScript.parentElement;
+                            ${src}
+                        })();
+                    `;
+                    this.appendChild(script);
+                }
+            }
+        }
+        customElements.define('threejs-scene', ThreejsScene);
+    </script>
+</head>
+<body class="bg-primary-container text-on-surface font-body-md overflow-x-hidden selection:bg-surface-tint selection:text-primary-container">
+<!-- Custom Cursor -->
+<div class="custom-cursor" id="custom-cursor"></div>
+<div class="custom-cursor-follower" id="custom-cursor-follower"></div>
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-xl border-b border-white/10 dark:bg-surface/70 cinematic-reveal" aria-label="Main navigation">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 md:py-6 max-w-[1440px] mx-auto">
+<!-- Brand -->
+<a class="font-headline-md text-headline-md tracking-tighter text-on-surface dark:text-on-surface hover:opacity-80 transition-opacity" data-interactive="" href="#">
+                MKZORA
+            </a>
+<!-- Links (Desktop) -->
+<div class="hidden lg:flex items-center gap-stack-lg">
+<a class="font-label-caps text-label-caps text-on-surface-variant/60 hover:text-on-surface transition-colors duration-300 relative group" data-interactive="" href="#work">
+                    Work
+                    <span class="absolute -bottom-1 left-0 w-0 h-px bg-on-surface transition-all duration-300 group-hover:w-full"></span>
+</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant/60 hover:text-on-surface transition-colors duration-300 relative group" data-interactive="" href="#">Services<span class="absolute -bottom-1 left-0 w-0 h-px bg-on-surface transition-all duration-300 group-hover:w-full"></span></a>
+<a class="font-label-caps text-label-caps text-on-surface-variant/60 hover:text-on-surface transition-colors duration-300 relative group" data-interactive="" href="#">Process<span class="absolute -bottom-1 left-0 w-0 h-px bg-on-surface transition-all duration-300 group-hover:w-full"></span>
+</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant/60 hover:text-on-surface transition-colors duration-300 relative group" data-interactive="" href="#">About<span class="absolute -bottom-1 left-0 w-0 h-px bg-on-surface transition-all duration-300 group-hover:w-full"></span>
+</a>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-stack-md">
+<a class="hidden lg:block font-label-caps text-label-caps text-on-surface hover:opacity-80 transition-opacity" data-interactive="" href="#contact">
+                    Contact
+                </a>
+<a class="hidden lg:inline-block bg-primary text-primary-container font-label-caps text-label-caps px-6 py-3 rounded-DEFAULT hover:bg-surface-tint transition-colors hover:scale-95 duration-200" data-interactive="" href="#contact">
+                    Start Project
+                </a>
+<!-- Mobile menu button -->
+<button class="lg:hidden flex flex-col justify-center items-center w-11 h-11 gap-[6px]" id="mobile-menu-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+    <span class="hamburger-bar"></span>
+    <span class="hamburger-bar"></span>
+    <span class="hamburger-bar"></span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu-overlay" id="mobile-menu" role="dialog" aria-label="Navigation menu" aria-hidden="true">
+    <a class="mobile-menu-link" href="#work">Work</a>
+    <a class="mobile-menu-link" href="#">Services</a>
+    <a class="mobile-menu-link" href="#">Process</a>
+    <a class="mobile-menu-link" href="#">About</a>
+    <a class="mobile-menu-link" href="#contact">Contact</a>
+    <a class="mobile-menu-link bg-on-surface text-primary-container text-center mt-8 py-4 font-label-caps text-label-caps tracking-[0.15em]" href="#contact" style="font-size:12px;line-height:16px;font-weight:600;font-family:'Geist',sans-serif;border-bottom:none;">START YOUR PROJECT <span class="ml-2" style="font-family:'Geist',sans-serif">-&gt;</span></a>
+</div>
+<main>
+<!-- 1. Cinematic Hero -->
+<section class="relative min-h-screen flex items-end pb-section-gap pt-32 px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto w-full">
+<!-- Background Shader -->
+<!-- STITCH_THREEJS_START:ANIMATION_7 class="absolute inset-0 w-full h-full bg-transparent pointer-events-none" -->
+<div class="absolute inset-0 w-full h-full bg-transparent pointer-events-none" style="display:block;">
+<div id="threejs-container-ANIMATION_7" style="width:100%;height:100%"></div>
+<script>
+(function() {
+  const container = document.getElementById('threejs-container-ANIMATION_7');
+  if (!container || typeof THREE === 'undefined') return;
+
+  const width = container.clientWidth || window.innerWidth;
+  const height = container.clientHeight || window.innerHeight;
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+  camera.position.z = 5;
+
+  const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+  renderer.setSize(width, height);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  container.appendChild(renderer.domElement);
+
+  // Lighting
+  const ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
+  scene.add(ambientLight);
+
+  const pointLight1 = new THREE.PointLight(0xffffff, 0.8);
+  pointLight1.position.set(5, 5, 5);
+  scene.add(pointLight1);
+
+  const pointLight2 = new THREE.PointLight(0xffffff, 0.3);
+  pointLight2.position.set(-5, -5, 2);
+  scene.add(pointLight2);
+
+  // Architectural Forms - Layered geometric surfaces
+  const group = new THREE.Group();
+  scene.add(group);
+
+  const material = new THREE.MeshPhongMaterial({
+      color: 0x141313,
+      specular: 0x444444,
+      shininess: 100,
+      transparent: true,
+      opacity: 0.9,
+      side: THREE.DoubleSide
+  });
+
+  // Reduce geometry count on mobile for performance
+  const isMobile = window.innerWidth < 768;
+  const slabCount = isMobile ? 5 : 8;
+
+  for (let i = 0; i < slabCount; i++) {
+      const geometry = new THREE.BoxGeometry(
+          4 + Math.random() * 2,
+          0.05 + Math.random() * 0.1,
+          2 + Math.random() * 4
+      );
+      const mesh = new THREE.Mesh(geometry, material);
+      mesh.position.y = (i - slabCount / 2) * 0.8;
+      mesh.position.z = (Math.random() - 0.5) * 2;
+      mesh.rotation.y = Math.random() * Math.PI;
+      mesh.rotation.x = (Math.random() - 0.5) * 0.2;
+      group.add(mesh);
+  }
+
+  // Interaction state (mouse only)
+  let mouseX = 0;
+  let mouseY = 0;
+  let targetX = 0;
+  let targetY = 0;
+
+  if (window.matchMedia('(pointer: fine)').matches) {
+      window.addEventListener('mousemove', (e) => {
+          mouseX = (e.clientX - window.innerWidth / 2) / 100;
+          mouseY = (e.clientY - window.innerHeight / 2) / 100;
+      });
+  }
+
+  let animationId;
+  function animate(time) {
+      const t = time * 0.0005;
+      
+      targetX += (mouseX - targetX) * 0.05;
+      targetY += (mouseY - targetY) * 0.05;
+      
+      group.rotation.y = t * 0.1 + targetX * 0.1;
+      group.rotation.x = Math.sin(t * 0.2) * 0.05 + targetY * 0.1;
+      group.position.y = Math.sin(t) * 0.1;
+
+      renderer.render(scene, camera);
+      animationId = requestAnimationFrame(animate);
+  }
+
+  window.addEventListener('resize', () => {
+      const w = container.clientWidth || window.innerWidth;
+      const h = container.clientHeight || window.innerHeight;
+      camera.aspect = w / h;
+      camera.updateProjectionMatrix();
+      renderer.setSize(w, h);
+  });
+
+  animate(0);
+
+})();
+</script>
+</div>
+<!-- STITCH_THREEJS_END:ANIMATION_7 -->
+<!-- Content -->
+<div class="relative z-10 w-full grid grid-cols-1 md:grid-cols-12 gap-gutter items-end pb-12">
+<div class="md:col-span-12">
+<h1 class="font-display-xl text-display-xl-mobile md:text-display-xl responsive-display text-on-surface uppercase mb-stack-lg max-w-6xl tracking-tight">
+<span class="block cinematic-reveal delay-100">Make Your Business</span>
+<span class="block cinematic-reveal delay-200">Impossible To Ignore.</span>
+</h1>
+</div>
+<div class="md:col-span-8 flex flex-col gap-stack-lg cinematic-reveal delay-300">
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                        Digital experiences designed to make your business more visible, credible, memorable and easier to choose.
+                    </p>
+<div class="flex flex-wrap gap-stack-md items-center cinematic-reveal delay-400">
+<a class="bg-on-surface text-primary-container font-label-caps text-label-caps px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:scale-95 transition-transform duration-200 border border-transparent shadow-lg shadow-on-surface/10" data-interactive="" href="#contact">
+                            START YOUR PROJECT <span class="ml-2 font-mono-technical">-&gt;</span>
+</a>
+<a class="border border-outline-variant/50 text-on-surface font-label-caps text-label-caps px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-white/5 hover:border-outline-variant transition-all duration-200" data-interactive="" href="#work">
+                            EXPLORE OUR WORK <span class="ml-2 font-mono-technical">↓</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. Brand Statement -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface max-w-[1440px] mx-auto w-full relative">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-4 hidden md:block reveal-up">
+<span class="font-mono-technical text-mono-technical text-on-surface-variant/40 block transform -rotate-90 origin-bottom-left w-64 uppercase tracking-widest">
+                        MKZORA Digital // Marketing</span>
+</div>
+<div class="md:col-span-8 reveal-up">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg responsive-headline text-on-surface leading-tight max-w-4xl">
+                        WE DON'T JUST BUILD DIGITAL PRESENCES. <br>
+<span class="text-on-surface-variant/50">WE BUILD EXPERIENCES PEOPLE REMEMBER.</span>
+</h2>
+</div>
+</div>
+</section>
+<!-- 3. What We Build (Services) - Bento Grid -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto w-full">
+<div class="mb-stack-lg flex justify-between items-end reveal-up">
+<h2 class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase">What We Build</h2>
+<span class="font-mono-technical text-mono-technical text-on-surface-variant/40">[ 01 ]</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-1 ghost-border bg-white/10 p-px">
+<!-- Service 1 (Large) -->
+<div class="md:col-span-8 bg-surface-container-highest p-margin-tablet service-card-lg min-h-[400px] flex flex-col justify-between interactive-card group reveal-up relative"><div class="absolute inset-0 overflow-hidden pointer-events-none opacity-20 z-0"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5RvbThh_v9ucQu_5_ecV45AA3iUmQFBrpuwfydHKfyK-8MrEnasp55vB4-GjlGskQqkBDiwSMiMwGLZfInik63jl2IL2MFBBABRatmqpK8yJC73MVsg0lDpFurzcG4O9AChdpft_mWrxjv4G86zXQgBHwTLVJe2qiY9X3VkcVptMc_OaXKDnAacMFDBq85GRIo_q5SJ6EXkhKrl8bv0pzjIKq182OQK-4grG-nlCnwVKkFoSWK-TzEQ" alt="Premium digital technology studio interface" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy"></div>
+<div class="flex justify-between items-start relative z-10">
+<span class="font-mono-technical text-mono-technical text-on-surface-variant/60">01</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-on-surface transition-colors" data-icon="desktop_windows">desktop_windows</span>
+</div>
+<div class="relative z-10">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">Website Development</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">High-performance platforms engineered for scale.</p>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="md:col-span-4 bg-surface-container-highest p-margin-tablet service-card-lg min-h-[400px] flex flex-col justify-between interactive-card group reveal-up relative"><div class="absolute inset-0 overflow-hidden pointer-events-none opacity-20 z-0"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6rCSXA420hT7bMUIyn3D01OnOhujBrkjWU3xuowSGdulNg7I8Fk2zNY19rBYKPoMI_S7PdxR7-pMGZXG7vf5Q0BVukVaxGcRKYRBalF0fshMhTT9ajSHtNIslEnO1qC7KIqmHYqPYT9cgTr7qoNqMsiw3RnF3teKixrFMZzjUCOoFrKknCkF702KfMHnViJdfvV8oQLfbfFr3V_5ky9qA7DxckM8_RT4-3pZHGFoTsdcmDikA4sYlSA" alt="Premium e-commerce digital interface" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy"></div>
+<div class="flex justify-between items-start relative z-10">
+<span class="font-mono-technical text-mono-technical text-on-surface-variant/60">02</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-on-surface transition-colors" data-icon="shopping_cart">shopping_cart</span>
+</div>
+<div class="relative z-10">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">E-commerce</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Conversion-optimized retail experiences.</p>
+</div>
+</div>
+<!-- Services Row 2 -->
+<div class="md:col-span-4 bg-surface-container-highest p-margin-tablet service-card-sm min-h-[300px] flex flex-col justify-between interactive-card group reveal-up"><div class="relative w-full h-48 overflow-hidden mb-stack-md rounded-DEFAULT"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4UoQqE8oJQxbbWVT-ETwZGW4KY3H1vrZP2LB7WVAf6L7uIpEXALF7It2dLgg1H-oKOz51mIoTxBvB7deq_x0_zZzTeYXDzguKJ6gxewgkJqMl2OeSAj2drg7XOhd8Isw2oPAJ6RvbyKPEpaDeeQ6MqeLUZ_TK26w7P4bJwyza7ObOcU1rNsHzY9Xi8ZZG7aAn1jcMj9jrpc1ndPxgLFJee0iwXMpX-ef6jeN2z8_iQAYuFytr4fW1nA" alt="Premium editorial brand photography for luxury digital branding" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy"></div>
+<div class="flex justify-between items-start">
+<span class="font-mono-technical text-mono-technical text-on-surface-variant/60">03</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-on-surface transition-colors" data-icon="fingerprint">fingerprint</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">Branding</h3>
+</div>
+</div>
+<div class="md:col-span-4 bg-surface-container-highest p-margin-tablet service-card-sm min-h-[300px] flex flex-col justify-between interactive-card group reveal-up relative"><div class="absolute inset-0 overflow-hidden pointer-events-none opacity-20 z-0"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOJ0W5IOryxsq_deQnUmuUR4_p7pe-tS9rIqS64cCUjZrKLEOResamLZOVIFdsa-6iwLMBkDTPwoSHIA2XaC0AfOVMTQhd1U38ugaSTp5RZTQtXw1wsl5Yhe2F-M0BjNw4pcmKcAFw7j8DeG18bPCDs6BLXbqq0hp1axEX-ntqWdGakxdsofZ7amlpenirMxALyphSouJhleuHaOH6rT353AytGMbRW4W4C_mTI4zdvsFY6eeVfjKMZw" alt="Premium social media content presentation" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy"></div>
+<div class="flex justify-between items-start relative z-10">
+<span class="font-mono-technical text-mono-technical text-on-surface-variant/60">04</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-on-surface transition-colors" data-icon="share">share</span>
+</div>
+<div class="relative z-10">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">Social Media</h3>
+</div>
+</div>
+<div class="md:col-span-4 bg-surface-container-highest p-margin-tablet service-card-sm min-h-[300px] flex flex-col justify-between interactive-card group reveal-up relative"><div class="absolute inset-0 overflow-hidden pointer-events-none opacity-20 z-0"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfEAmPAeStIoeNJ49_DkXYKAjCPSwC0YImDby8tVn2A0mh8hmHWwgcezukBkQYWq_3wWQTdQmVrus8x7ahXrmX7StGKdhRODUun_ebMbC7rpgczN8I5z4S-f03bINQXNROob2F3kafJM_mOcYIFxdk1lp1WKJfTrbbrls7sFClfVLepnye4UbCf9u_Mx1YGma26t8ZGZZKnoXvj6SUuxvofivZOpGnal26fMAHmfOXWIu9NdS4hgONSQ" alt="Premium digital marketing data insights interface" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy"></div><div class="flex justify-between items-start relative z-10"><span class="font-mono-technical text-mono-technical text-on-surface-variant/60">05</span><span class="material-symbols-outlined text-on-surface-variant group-hover:text-on-surface transition-colors" data-icon="campaign">campaign</span></div><div class="relative z-10"><h3 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">Digital Marketing</h3></div></div>
+</div>
+</section>
+<!-- 4. Selected Work -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-dim max-w-[1440px] mx-auto w-full" id="work">
+<div class="mb-stack-lg flex justify-between items-end reveal-up">
+<h2 class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase">Selected Work</h2>
+<span class="font-mono-technical text-mono-technical text-on-surface-variant/40">[ 02 ]</span>
+</div>
+<div class="flex flex-col gap-section-gap">
+<!-- Project 1 -->
+<article class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center group reveal-up">
+<div class="md:col-span-7 relative h-[614px] overflow-hidden project-img-wrap"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiI3VU1xng9vfxGbGrE7Wjh_gXe2VBdWYXLKt1DE63agcmVWd87NzphDIDcXzgYsMjITyRuasD4XoKDyy9TpD4fco0Y1JNo-6fv1ONhJPVeg_O5EjX7fHniTU53Wfq6s6jAFHgsAbU02XEwiXQYS39FOOxo9aKt0D-2GQciEh2n4nKbmJ4LGnjwfF_8g5vz9a7LrD8EWwIrW-_SYSxKCupcTBgoq7ajPP-0CHedrmZ1m61TYc8ogidrbpYpU2h5IpORQw" alt="KStudioVX Project Showcase — premium website development" class="absolute inset-0 w-full h-full object-contain transition-transform duration-700 group-hover:scale-105" loading="lazy"></div>
+<div class="md:col-span-4 md:col-start-9 flex flex-col gap-stack-md pt-stack-lg md:pt-0">
+<div class="flex gap-2">
+
+<span class="font-label-caps text-label-caps ghost-border px-3 py-1 text-on-surface-variant">DEVELOPMENT</span>
+</div>
+<h3 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">KStudioVX</h3>
+<a class="font-label-caps text-label-caps text-on-surface flex items-center gap-2 w-fit mt-stack-md group-hover:ml-2 transition-all duration-300" data-interactive="" href="https://kstudiovx.com/" target="_blank" rel="noopener noreferrer">
+                            VIEW Project<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Project 2 -->
+<article class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center group reveal-up">
+<div class="md:col-span-4 flex flex-col gap-stack-md pb-stack-lg md:pb-0 order-2 md:order-1">
+<div class="flex gap-2">
+<span class="font-label-caps text-label-caps ghost-border px-3 py-1 text-on-surface-variant">Education</span>
+<span class="font-label-caps text-label-caps ghost-border px-3 py-1 text-on-surface-variant">BRANDING</span>
+</div>
+<h3 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Mugavari Tuition Center</h3>
+<a class="font-label-caps text-label-caps text-on-surface flex items-center gap-2 w-fit mt-stack-md group-hover:ml-2 transition-all duration-300" data-interactive="" href="https://mugavarituitioncenter.pages.dev/" target="_blank" rel="noopener noreferrer">
+                            VIEW Project<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="md:col-span-7 md:col-start-6 relative h-[614px] overflow-hidden order-1 md:order-2 project-img-wrap">
+<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA56Ez3FkB37srij03DQHDGnFCdhJmv98fLBsuQGNVWneYc7y9EHrX6G5ufddmOKCmd6ickT5p0vTgrRJVSetMvDsHs6V7ZXykaZlMHjeM9GedFye8L7XahiEfBozqBUdHv99gYPVfaaXFiYIBI9nVuRSWupfFwT_amMThr6fFkEi8ZUMUnlHzfZepJx30ZDKyEcDq77EAfJPgPuXeI80JF5wC2w5K8FIREVQ1J3jsHQHYBwdYTIte1PL9DF_vMTE0VHvg" alt="Mugavari Tuition Center Project Showcase — education branding" class="absolute inset-0 w-full h-full object-contain transition-transform duration-700 group-hover:scale-105" loading="lazy">
+</div>
+</article>
+<!-- Project 3 -->
+<article class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center group reveal-up">
+<div class="md:col-span-7 relative h-[614px] overflow-hidden project-img-wrap">
+<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDB7wUrxo8trVJLvcFefgVt5v4QYR6uyQthGw-OPuWrbTdGUKjPQI5S2cl5snGComawGbCi8x_-AyvgMO-lWue7vJ52xcTaER1QfhDCzHXlte6uD2f1rE1enUt-lp4WBwjBc_JoeCXMQjDYHrQtSOAcQn-dCbQiGJC9dyCxnrI58S0uZ17ulvo10n96JJM9P1pYjPvjr3wR9k8UOaqVYqa4PEt27KNTt4JV5cOXxtueGeCb6mtE8dqiyRev3szYh1zSCJw" alt="DTDC Hosur Project Showcase — digital marketing strategy" class="absolute inset-0 w-full h-full object-contain transition-transform duration-700 group-hover:scale-105" loading="lazy">
+</div>
+<div class="md:col-span-4 md:col-start-9 flex flex-col gap-stack-md pt-stack-lg md:pt-0">
+<div class="flex gap-2">
+<span class="font-label-caps text-label-caps ghost-border px-3 py-1 text-on-surface-variant">Marketing</span>
+<span class="font-label-caps text-label-caps ghost-border px-3 py-1 text-on-surface-variant">STRATEGY</span>
+</div>
+<h3 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">DTDC Hosur</h3>
+<a class="font-label-caps text-label-caps text-on-surface flex items-center gap-2 w-fit mt-stack-md group-hover:ml-2 transition-all duration-300" data-interactive="" href="https://dtdchosur.com/" target="_blank" rel="noopener noreferrer">
+VIEW Project<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</article></div>
+</section>
+<!-- 5. The MKZORA Difference -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto w-full">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+<div class="md:col-span-4 reveal-up">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg responsive-headline text-on-surface leading-tight">
+                        MORE THAN <br>A WEBSITE.
+                    </h2>
+</div>
+<div class="md:col-span-7 md:col-start-6 grid grid-cols-1 sm:grid-cols-2 gap-y-stack-lg gap-x-gutter">
+<!-- Pillars -->
+<div class="reveal-up">
+<span class="font-mono-technical text-mono-technical text-on-surface-variant/40 block mb-stack-sm">/ STRATEGY</span>
+<p class="font-body-md text-body-md text-on-surface-variant">We align your digital presence with your core business objectives before writing a single line of code.</p>
+</div>
+<div class="reveal-up" style="transition-delay: 0.1s;">
+<span class="font-mono-technical text-mono-technical text-on-surface-variant/40 block mb-stack-sm">/ DESIGN</span>
+<p class="font-body-md text-body-md text-on-surface-variant">Creating visual tension and hierarchy that commands attention and communicates authority.</p>
+</div>
+<div class="reveal-up" style="transition-delay: 0.2s;">
+<span class="font-mono-technical text-mono-technical text-on-surface-variant/40 block mb-stack-sm">/ TECHNOLOGY</span>
+<p class="font-body-md text-body-md text-on-surface-variant">Utilizing modern frameworks to build performant, scalable, and resilient digital architectures.</p>
+</div>
+<div class="reveal-up" style="transition-delay: 0.3s;">
+<span class="font-mono-technical text-mono-technical text-on-surface-variant/40 block mb-stack-sm">/ MARKETING</span>
+<p class="font-body-md text-body-md text-on-surface-variant">Ensuring the platforms we build connect with the right audience to drive measurable growth.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 10. Project Enquiry / Form -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface max-w-[1440px] mx-auto w-full" id="contact">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-5 reveal-up">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg responsive-headline text-on-surface mb-stack-md">Initiate Project</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">For serious inquiries regarding digital transformation, branding, or platform development.</p>
+</div>
+<div class="md:col-span-6 md:col-start-7 reveal-up">
+<form id="enquiry-form" class="flex flex-col gap-stack-lg">
+<div class="relative">
+<label class="font-label-caps text-label-caps text-on-surface-variant block mb-2" for="contact-name">FULL NAME</label>
+<input id="contact-name" class="w-full bg-transparent ghost-border-b border-t-0 border-l-0 border-r-0 focus:border-primary focus:ring-0 text-on-surface font-body-md px-0 py-3 transition-colors" placeholder="John Doe" type="text">
+</div>
+<div class="relative">
+<label class="font-label-caps text-label-caps text-on-surface-variant block mb-2" for="contact-email">EMAIL ADDRESS</label>
+<input id="contact-email" class="w-full bg-transparent ghost-border-b border-t-0 border-l-0 border-r-0 focus:border-primary focus:ring-0 text-on-surface font-body-md px-0 py-3 transition-colors" placeholder="john@company.com" type="email">
+</div>
+<div class="relative">
+<label class="font-label-caps text-label-caps text-on-surface-variant block mb-2" for="contact-details">PROJECT DETAILS</label>
+<textarea id="contact-details" class="w-full bg-transparent ghost-border-b border-t-0 border-l-0 border-r-0 focus:border-primary focus:ring-0 text-on-surface font-body-md px-0 py-3 transition-colors resize-none" placeholder="Briefly describe your objectives..." rows="4"></textarea>
+</div>
+<button id="enquiry-submit-btn" class="bg-primary text-primary-container font-label-caps text-label-caps px-8 py-4 rounded-DEFAULT hover:scale-95 transition-transform duration-200 w-fit mt-stack-md" data-interactive="" type="button">
+                            SUBMIT ENQUIRY <span class="ml-2 font-mono-technical">-&gt;</span>
+</button>
+</form>
+</div>
+</div>
+</section>
+<!-- 11. Final Cinematic CTA -->
+<section class="cta-section-height min-h-[819px] flex items-center justify-center py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-lowest relative overflow-hidden w-full">
+<div class="absolute inset-0 w-full h-full opacity-20 pointer-events-none mix-blend-screen">
+</div>
+<div class="relative z-10 text-center max-w-4xl mx-auto reveal-up">
+<h2 class="font-display-xl text-display-xl-mobile md:text-display-xl responsive-display text-on-surface uppercase mb-stack-lg">
+                    LET'S BUILD <br>SOMETHING <br>WORTH <br>REMEMBERING.
+                </h2>
+<a class="inline-block bg-on-surface text-primary-container font-label-caps text-label-caps px-8 sm:px-10 py-4 sm:py-5 rounded-DEFAULT hover:scale-95 transition-transform duration-200 mt-stack-md" data-interactive="" href="#contact">
+                    START YOUR PROJECT <span class="ml-2 font-mono-technical">-&gt;</span>
+</a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface dark:bg-surface w-full py-section-gap border-t border-white/10">
+<div class="flex flex-col md:flex-row justify-between items-start px-margin-mobile md:px-margin-desktop w-full max-w-[1440px] mx-auto gap-stack-lg">
+<!-- Brand -->
+<div class="flex flex-col gap-stack-sm">
+<span class="font-headline-lg text-headline-lg text-on-surface block leading-none">MKZORA</span>
+<span class="font-body-md text-body-md text-on-surface-variant">© 2026&nbsp; MKZORA. ALL RIGHTS RESERVED.</span>
+</div>
+<!-- Links -->
+<div class="flex flex-col md:flex-row gap-stack-md md:gap-stack-lg">
+<a class="font-body-md text-body-md text-on-tertiary-container hover:text-on-surface hover:text-primary transition-colors" data-interactive="" href="#">Instagram</a>
+<a class="font-body-md text-body-md text-on-tertiary-container hover:text-on-surface hover:text-primary transition-colors" data-interactive="" href="#">LinkedIn</a>
+<a class="font-body-md text-body-md text-on-tertiary-container hover:text-on-surface hover:text-primary transition-colors" data-interactive="" href="#">Twitter</a>
+<a class="font-body-md text-body-md text-on-tertiary-container hover:text-on-surface hover:text-primary transition-colors" data-interactive="" href="#">WhatsApp</a>
+</div>
+</div>
+</footer>
+<script src="js/main.js"></script>
+</body></html>

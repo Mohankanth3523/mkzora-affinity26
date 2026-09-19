@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#070A18">
+<title>Page not found | MKZORA &amp; AFFINITY '26</title>
+<!--
+  Root 404 page served by Cloudflare Pages for any URL that matches no file.
+  Fully self-contained (inline CSS, no external requests, absolute links only) so it renders
+  correctly no matter how deep the missing URL is. Valid routes (/, /affinity26/, /affinity26/register/ ...)
+  are real files and never reach this page.
+-->
+<style>
+  :root {
+    --midnight: #070A18;
+    --navy: #0D1530;
+    --gold: #C9A24D;
+    --warm-gold: #E8C76A;
+    --ivory: #F7F0DE;
+    --sand: #D9C19A;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background:
+      radial-gradient(ellipse at 50% 0%, rgba(201, 162, 77, 0.14), transparent 60%),
+      linear-gradient(180deg, var(--navy), var(--midnight) 70%);
+    color: var(--ivory);
+    font-family: Georgia, "Times New Roman", serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 560px; width: 100%; text-align: center; }
+  .crescent { width: 56px; height: 56px; margin: 0 auto 20px; display: block; }
+  .code {
+    margin: 0;
+    font-size: clamp(64px, 18vw, 112px);
+    line-height: 1;
+    letter-spacing: 0.06em;
+    color: var(--gold);
+    font-weight: 600;
+  }
+  h1 {
+    margin: 12px 0 0;
+    font-size: clamp(20px, 5vw, 28px);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+  .rule {
+    width: 96px; height: 1px; margin: 22px auto;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+  p { margin: 0 auto; max-width: 440px; color: var(--sand); line-height: 1.65; font-size: 16px; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 30px; }
+  a.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 6px;
+    border: 1px solid var(--gold);
+    text-decoration: none;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: background 0.2s, color 0.2s;
+  }
+  a.primary { background: var(--gold); color: var(--midnight); }
+  a.primary:hover, a.primary:focus-visible { background: var(--warm-gold); }
+  a.secondary { color: var(--warm-gold); }
+  a.secondary:hover, a.secondary:focus-visible { background: rgba(201, 162, 77, 0.14); }
+  a.btn:focus-visible { outline: 2px solid var(--warm-gold); outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) { a.btn { transition: none; } }
+</style>
+</head>
+<body>
+<main>
+  <svg class="crescent" viewBox="0 0 64 64" fill="none" aria-hidden="true" focusable="false">
+    <path d="M40 8a24 24 0 1 0 16 40A20 20 0 0 1 40 8Z" stroke="#C9A24D" stroke-width="2.5" stroke-linejoin="round"/>
+    <circle cx="50" cy="14" r="2.2" fill="#E8C76A"/>
+  </svg>
+  <p class="code" aria-hidden="true">404</p>
+  <h1>This page has slipped away</h1>
+  <div class="rule" role="presentation"></div>
+  <p>The page you are looking for does not exist or may have moved. Choose where you would like to go instead.</p>
+  <div class="actions">
+    <a class="btn primary" href="/affinity26/">AFFINITY &rsquo;26</a>
+    <a class="btn secondary" href="/">MKZORA Home</a>
+  </div>
+</main>
+</body>
+</html>

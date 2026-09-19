@@ -1,0 +1,319 @@
+/* ===== MKZORA — Main Stylesheet ===== */
+
+/* Base styles */
+body {
+    background-color: #050505;
+    color: #e5e2e1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Utilities */
+.ghost-border {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.ghost-border-b {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.ghost-border-t {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Interactive Depth */
+.interactive-card {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.interactive-card:hover {
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+    background-color: rgba(255,255,255,0.02);
+}
+
+/* Cinematic typography */
+.mix-blend-difference {
+    mix-blend-mode: difference;
+}
+
+/* Custom Cursor */
+.custom-cursor {
+    width: 8px;
+    height: 8px;
+    background: #F5F5F5;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s, height 0.2s, background-color 0.2s;
+    display: none;
+}
+
+.custom-cursor-follower {
+    width: 32px;
+    height: 32px;
+    border: 1px solid rgba(245, 245, 245, 0.3);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: all 0.1s ease-out;
+    display: none;
+}
+
+/* Hover states for cursor */
+body.hovering-link .custom-cursor {
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    border: 1px solid #F5F5F5;
+}
+body.hovering-link .custom-cursor-follower {
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+/* Custom cursor — only for fine pointer devices with hover */
+@media (pointer: fine) and (hover: hover) {
+    .custom-cursor,
+    .custom-cursor-follower {
+        display: block;
+    }
+    * {
+        cursor: none !important;
+    }
+}
+
+/* Reveal animation */
+.reveal-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Cinematic Hero Animations */
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.cinematic-reveal {
+    animation: fade-in-up 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+}
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+
+/* ===== RESPONSIVE & PRODUCTION FIXES ===== */
+
+/* Focus visible — accessible keyboard indicator */
+:focus-visible {
+    outline: 2px solid #c9c6c5;
+    outline-offset: 2px;
+}
+
+/* Reduced motion — accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    .reveal-up {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+    .cinematic-reveal {
+        opacity: 1 !important;
+    }
+    .custom-cursor,
+    .custom-cursor-follower {
+        display: none !important;
+    }
+}
+
+/* Scroll margin for fixed nav offset */
+#work, #contact {
+    scroll-margin-top: 100px;
+}
+
+/* Responsive display typography (hero, final CTA) */
+.responsive-display {
+    font-size: clamp(2.5rem, 14vw, 7.5rem) !important;
+    line-height: 0.9 !important;
+    letter-spacing: -0.03em;
+}
+
+/* Responsive headline typography */
+.responsive-headline {
+    font-size: clamp(2rem, 6vw, 4rem) !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.02em;
+}
+
+/* Responsive section spacing */
+@media (max-width: 767px) {
+    .py-section-gap {
+        padding-top: 60px !important;
+        padding-bottom: 60px !important;
+    }
+    .gap-section-gap {
+        gap: 60px !important;
+    }
+    .pb-section-gap {
+        padding-bottom: 60px !important;
+    }
+    .p-margin-tablet {
+        padding: 20px !important;
+    }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+    .py-section-gap {
+        padding-top: 100px !important;
+        padding-bottom: 100px !important;
+    }
+    .gap-section-gap {
+        gap: 80px !important;
+    }
+    .pb-section-gap {
+        padding-bottom: 100px !important;
+    }
+}
+
+/* Service cards — mobile height reduction */
+@media (max-width: 767px) {
+    .service-card-lg {
+        min-height: 280px !important;
+    }
+    .service-card-sm {
+        min-height: 220px !important;
+    }
+}
+
+/* Final CTA — mobile height */
+@media (max-width: 767px) {
+    .cta-section-height {
+        min-height: 60vh !important;
+    }
+}
+
+/* Project image containers — mobile fix */
+@media (max-width: 767px) {
+    .project-img-wrap {
+        height: auto !important;
+        aspect-ratio: 16 / 10;
+        position: relative !important;
+    }
+    .project-img-wrap img {
+        position: relative !important;
+        inset: auto !important;
+    }
+}
+
+/* Three.js canvas containment */
+#threejs-container-ANIMATION_7 canvas {
+    max-width: 100% !important;
+}
+
+/* ===== MOBILE NAVIGATION ===== */
+
+.mobile-menu-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: rgba(5, 5, 5, 0.97);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 32px 60px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.4s;
+}
+.mobile-menu-overlay.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+.mobile-menu-link {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: -0.01em;
+    color: #e5e2e1;
+    padding: 24px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: opacity 0.3s;
+}
+.mobile-menu-link:hover,
+.mobile-menu-link:focus-visible {
+    opacity: 0.7;
+}
+
+/* Hamburger button bars */
+.hamburger-bar {
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: #e5e2e1;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.menu-open .hamburger-bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.menu-open .hamburger-bar:nth-child(2) {
+    opacity: 0;
+}
+.menu-open .hamburger-bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ===== FORM VALIDATION ===== */
+
+.form-validation-msg {
+    font-family: 'Geist', sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: #ffb4ab;
+    margin-top: 6px;
+    display: none;
+}
+.form-validation-msg.is-visible {
+    display: block;
+}
+.form-field-error {
+    border-bottom-color: #ffb4ab !important;
+}
+
+/* WhatsApp status message */
+.whatsapp-status-msg {
+    font-family: 'Geist', sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #c4c7c7;
+    margin-top: 12px;
+    opacity: 0;
+    transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.whatsapp-status-msg.is-visible {
+    opacity: 1;
+}

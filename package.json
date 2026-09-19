@@ -1,0 +1,17 @@
+{
+  "name": "mkzora-affinity26",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Combined static deployment: MKZORA landing page at / and AFFINITY '26 (Next.js static export) at /affinity26/, plus a Cloudflare Pages Function proxy for registrations.",
+  "engines": {
+    "node": ">=18.18.0"
+  },
+  "scripts": {
+    "install:affinity": "npm ci --prefix affinity26-src",
+    "build": "npm run install:affinity && node scripts/assemble.mjs",
+    "assemble": "node scripts/assemble.mjs",
+    "audit": "node scripts/audit.mjs",
+    "dev:affinity": "npm run dev --prefix affinity26-src",
+    "preview": "node scripts/serve-local.mjs"
+  }
+}
